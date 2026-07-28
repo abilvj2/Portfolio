@@ -48,6 +48,10 @@ jobs:
 
   deploy:
     needs: build
+    # The github-pages environment only accepts deployments from the default
+    # branch. Skipping here keeps runs on other branches green instead of
+    # failing them at the environment gate.
+    if: github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     environment:
       name: github-pages
