@@ -10,8 +10,9 @@ install anything locally.
 
 ## Turning the site on (one-time, ~30 seconds)
 
-The deploy workflow tries to enable GitHub Pages by itself. If the first run
-fails at the *Configure Pages* step, enable it manually:
+GitHub Pages has to be switched on by a human once — a workflow cannot do it,
+because creating a Pages site needs repo-admin scope that the Actions token does
+not carry.
 
 1. Go to **Settings → Pages** in this repository.
 2. Under **Build and deployment → Source**, choose **GitHub Actions**.
@@ -20,6 +21,9 @@ fails at the *Configure Pages* step, enable it manually:
 
 After that, every push to `main` (or to the development branch) rebuilds and
 redeploys automatically.
+
+The repository must also be **public** — Pages on a private repo requires a paid
+GitHub plan. Public repos get Pages and unlimited Actions minutes for free.
 
 ## Editing the content
 
