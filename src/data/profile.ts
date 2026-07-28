@@ -282,11 +282,32 @@ export const profile = {
     },
   ],
 
-  // GITHUB / TODO for email.
   links: {
     github: "https://github.com/abilvj2",
     linkedin: "https://www.linkedin.com/in/abilvjose/",
-    email: "abilvj2@gmail.com",
+
+    /**
+     * Google Form used as the contact channel, so the email address is never
+     * published on the page for scrapers to harvest.
+     *
+     * To set this up:
+     *  1. Create a form at https://forms.new — suggested fields: Name, Email,
+     *     Company (optional), Message.
+     *  2. In the form, open the Responses tab → ⋮ menu → "Get email
+     *     notifications for new responses". That is what makes a submission
+     *     arrive in your inbox.
+     *  3. Click Send → the link icon (🔗) → copy the URL and paste it below.
+     *     A .../viewform URL is what you want; the shortened forms.gle link
+     *     works too but cannot be embedded.
+     *
+     * Until this is filled in, the contact section falls back to LinkedIn, so
+     * the live site is never left with a dead button.
+     */
+    contactForm: "",
+
+    /** Set false to show a button instead of embedding the form inline. */
+    contactFormEmbed: true,
+
     resume: "", // Drop a PDF in /public and set e.g. "resume.pdf"
   },
 } as const;

@@ -6,7 +6,7 @@ import {
   Github,
   Home,
   Linkedin,
-  Mail,
+  MessageSquare,
   User,
   Workflow,
 } from "lucide-react";
@@ -82,8 +82,8 @@ export function Navbar() {
         >
           <Linkedin className="h-[45%] w-[45%]" strokeWidth={1.75} />
         </DockIcon>
-        <DockIcon label="Email" onClick={() => go("contact")}>
-          <Mail className="h-[45%] w-[45%]" strokeWidth={1.75} />
+        <DockIcon label="Contact" onClick={() => go("contact")}>
+          <MessageSquare className="h-[45%] w-[45%]" strokeWidth={1.75} />
         </DockIcon>
       </Dock>
     </motion.nav>
