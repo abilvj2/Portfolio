@@ -26,7 +26,7 @@ export const profile = {
   avatar: "https://avatars.githubusercontent.com/u/37629877?v=4",
 
   tagline:
-    "Software engineer with 5+ years building production Python applications, AI-powered solutions and scalable data pipelines across healthcare and enterprise environments.",
+    "Software engineer with 7+ years building production Python applications, AI-powered solutions and scalable data pipelines across healthcare and enterprise environments.",
 
   summary: [
     "I work across the full AI development lifecycle — data ingestion through deployment and monitoring — building Large Language Model applications, Retrieval-Augmented Generation systems and generative AI agents on Azure and Microsoft Copilot Studio.",
@@ -214,7 +214,7 @@ export const profile = {
   ],
 
   stats: [
-    { label: "Years of experience", value: 5, suffix: "+" },
+    { label: "Years of experience", value: 7, suffix: "+" },
     { label: "Employees served by AI agents", value: 500, suffix: "+" },
     { label: "Efficiency gain delivered", value: 50, suffix: "%" },
     { label: "Engineers trained", value: 30, suffix: "+" },
