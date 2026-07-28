@@ -303,7 +303,8 @@ export const profile = {
      * Until this is filled in, the contact section falls back to LinkedIn, so
      * the live site is never left with a dead button.
      */
-    contactForm: "",
+    contactForm:
+      "https://docs.google.com/forms/d/e/1FAIpQLScP-yHy__3dF0or8dHzjW3o5vf984x_JTHXwAWlf4Xmzu0JnQ/viewform",
 
     /** Set false to show a button instead of embedding the form inline. */
     contactFormEmbed: true,
