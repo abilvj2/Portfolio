@@ -58,7 +58,7 @@ noted at the top of each file. There is no component CLI or registry to install.
 
 **Aceternity UI:** Aurora Background · Spotlight · Meteors · Bento Grid · Text
 Generate Effect · Card Hover Effect · Card Spotlight · Tracing Beam · 3D Card ·
-Background Beams · Infinite Moving Cards · Sparkles
+Background Beams · Sparkles
 
 **Magic UI:** Marquee · Border Beam · Shimmer Button · Number Ticker · Blur Fade
 · Dock · Retro Grid · Dot &amp; Grid Pattern · Animated Gradient Text · Typing

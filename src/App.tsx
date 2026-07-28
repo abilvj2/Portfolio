@@ -6,7 +6,7 @@ import { Skills } from "@/components/sections/Skills";
 import { Pipeline } from "@/components/sections/Pipeline";
 import { Experience } from "@/components/sections/Experience";
 import { Projects } from "@/components/sections/Projects";
-import { Testimonials } from "@/components/sections/Testimonials";
+import { Credentials } from "@/components/sections/Credentials";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
 
@@ -29,12 +29,7 @@ export default function App() {
         <Pipeline />
         <Experience />
         <Projects />
-        {/*
-          Testimonials currently render placeholder quotes from
-          src/data/profile.ts — swap in real LinkedIn recommendations, or
-          delete this line to drop the section entirely.
-        */}
-        <Testimonials />
+        <Credentials />
         <Contact />
       </main>
 

@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import {
+  Bot,
   Brain,
   Cloud,
   Code2,
   Database,
-  Layers,
+  Network,
+  Server,
+  Sparkles,
 } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
@@ -14,24 +17,31 @@ import { Meteors } from "@/components/ui/meteors";
 import { profile } from "@/data/profile";
 import { cn } from "@/lib/utils";
 
-const ICONS = [Brain, Layers, Code2, Cloud, Database];
+const ICONS = [Sparkles, Brain, Code2, Cloud, Network, Database, Server, Bot];
 
-// Bento layout: first tile is wide, fourth is wide — keeps the grid from
-// looking like a plain 3-column list.
+// Bento layout: alternating wide and narrow tiles so the grid reads as a
+// composition rather than a plain 3-column list. Spans total 12 across 8
+// tiles, filling four clean rows.
 const SPANS = [
   "md:col-span-2",
   "md:col-span-1",
   "md:col-span-1",
   "md:col-span-2",
-  "md:col-span-3",
+  "md:col-span-1",
+  "md:col-span-2",
+  "md:col-span-2",
+  "md:col-span-1",
 ];
 
 const ACCENTS = [
-  "from-sky-500/20 via-cyan-500/10",
   "from-violet-500/20 via-fuchsia-500/10",
+  "from-sky-500/20 via-cyan-500/10",
   "from-emerald-500/20 via-teal-500/10",
   "from-amber-500/20 via-orange-500/10",
   "from-rose-500/20 via-pink-500/10",
+  "from-indigo-500/20 via-blue-500/10",
+  "from-teal-500/20 via-emerald-500/10",
+  "from-orange-500/20 via-red-500/10",
 ];
 
 export function Skills() {

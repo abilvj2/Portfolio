@@ -46,10 +46,11 @@ export function About() {
                 </h3>
                 <ul className="mt-3 space-y-2 text-sm text-slate-400">
                   {[
-                    "Deep learning for vision and language",
-                    "Generative models and representation learning",
-                    "Robotic process & document automation",
-                    "Cloud-deployed inference on GCP",
+                    "LLM applications, RAG and generative AI agents",
+                    "Production Python and C# services with REST APIs",
+                    "Data pipelines and real-time analytics on Microsoft Fabric",
+                    "HIPAA-aligned healthcare data and access control",
+                    "Intelligent automation with Power Platform and UiPath",
                   ].map((item) => (
                     <li key={item} className="flex gap-2">
                       <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-accent" />
@@ -94,7 +95,7 @@ export function About() {
                     Primary stack
                   </p>
                   <p className="mt-1 text-sm font-medium text-slate-200">
-                    Python · PyTorch · GCP
+                    Python · Azure · LLMs
                   </p>
                 </CardSpotlight>
               </div>

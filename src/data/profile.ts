@@ -3,158 +3,223 @@
  *  EDIT THIS FILE TO UPDATE THE WHOLE SITE.
  *
  *  Everything rendered on the portfolio reads from here — no component needs to
- *  be touched to change copy, projects, skills or links. Values sourced from the
- *  public GitHub profile (github.com/abilvj2) are marked GITHUB. Values marked
- *  TODO are placeholders that could not be read from LinkedIn (it blocks
- *  automated access) — replace them with the real details.
+ *  be touched to change copy, projects, skills or links.
+ *
+ *  Contact details are deliberately limited to LinkedIn, GitHub and the Google
+ *  Form. The email address and phone number from the résumé are NOT published
+ *  here, so they cannot be scraped off the page.
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
 export const profile = {
-  // GITHUB
   name: "Abil Varkichan Jose",
   shortName: "Abil",
   role: "AI Engineer",
-  // Rotating words in the hero headline.
   roles: [
     "AI Engineer",
+    "Software Engineer",
+    "LLM & RAG Developer",
     "Machine Learning Engineer",
-    "Computer Vision Developer",
-    "Data Science Practitioner",
-    "Automation Engineer",
+    "Data Pipeline Engineer",
   ],
   location: "Dallas, TX",
   avatar: "https://avatars.githubusercontent.com/u/37629877?v=4",
 
-  // GITHUB — from the profile README / bio
   tagline:
-    "Computer Science graduate with five years of industrial experience, building intelligent systems across artificial intelligence, machine learning, robotic automation and data science.",
+    "Software engineer with 5+ years building production Python applications, AI-powered solutions and scalable data pipelines across healthcare and enterprise environments.",
 
   summary: [
-    "I design and ship machine learning systems end to end — from framing the problem and preparing the data, through model training and evaluation, to deploying something that holds up under real traffic.",
-    "My work spans deep learning for computer vision, generative models, natural language systems and robotic process automation, with cloud deployments on Google Cloud Platform.",
-    "I care about the unglamorous parts: reproducible training runs, honest evaluation, and models that stay maintainable after the demo is over.",
+    "I work across the full AI development lifecycle — data ingestion through deployment and monitoring — building Large Language Model applications, Retrieval-Augmented Generation systems and generative AI agents on Azure and Microsoft Copilot Studio.",
+    "That sits on a foundation of traditional machine learning with TensorFlow, PyTorch and Scikit-learn, plus the engineering around it: RESTful APIs, containerised deployment with Docker and Kubernetes, and CI/CD.",
+    "Most of my recent work is HIPAA-aligned healthcare data serving 500+ users, where correctness and access control matter as much as model quality.",
   ],
 
-  // TODO — replace with your real LinkedIn experience entries.
   experience: [
     {
-      role: "AI / Machine Learning Engineer",
-      company: "Add your current employer",
-      period: "TODO — e.g. 2023 — Present",
-      location: "Dallas, TX",
+      role: "Software Engineer",
+      company: "Creative Solutions in HealthCare",
+      period: "Jul 2024 — Present",
+      location: "Texas",
       description:
-        "Placeholder entry. Replace with your LinkedIn role: what you built, the models and stack you used, and the measurable outcome.",
+        "Building AI agents and data infrastructure over enterprise healthcare data, with HIPAA-aligned handling of PHI throughout.",
       highlights: [
-        "Describe a system you designed or shipped",
-        "Name the stack (PyTorch / TensorFlow / GCP / etc.)",
-        "Quantify the impact — accuracy, latency, cost or hours saved",
+        "Engineered and deployed AI-powered agents on Microsoft Copilot Studio and Azure OpenAI, applying retrieval-augmented generation over enterprise healthcare data to automate knowledge workflows for 500+ employees",
+        "Designed and maintained data pipelines on Microsoft Fabric for ingestion, processing and transformation of large healthcare datasets, delivering real-time analytics and cutting turnaround time by 5 hours",
+        "Built Python and C# services with RESTful API integrations connecting Power Platform applications, SharePoint and SQL Server, and monitored performance and reliability of deployed APIs and pipelines in production",
+        "Designed and optimised 3+ SQL databases with role-based access control via Azure Entra ID, ensuring HIPAA-aligned handling of PHI while improving query performance for high-volume applications",
       ],
-      tags: ["Machine Learning", "Python", "Cloud"],
+      tags: ["Azure OpenAI", "RAG", "Copilot Studio", "Microsoft Fabric", "C#", "Python"],
     },
     {
-      role: "Software Engineer",
-      company: "Add a previous employer",
-      period: "TODO — e.g. 2020 — 2023",
-      location: "TODO",
+      role: "Intelligent Automation & Data Visualization Architect (Intern)",
+      company: "HP (Hewlett Packard)",
+      period: "May 2023 — Aug 2023",
+      location: "United States",
       description:
-        "Placeholder entry. Replace with the earlier role from your LinkedIn profile.",
+        "Enterprise analytics and reporting governance across Finance and IT, alongside an S/4HANA deployment.",
       highlights: [
-        "Systems or services you owned",
-        "Automation or data pipeline work",
-        "Collaboration and scale of the team",
+        "Built enterprise Power BI dashboards for business analytics, operational metrics and platform performance, delivering real-time visibility to 100+ stakeholders",
+        "Spearheaded a reporting roadmap and governance process with IT, Finance and data partners, aligning with S/4HANA deployment and stabilisation",
+        "Engineered analytics metrics and KPIs using generative AI (GPT, Power Virtual Agents), mining AR, AP, T&E and Payroll data via Webi, Celonis, SQL and Teradata",
       ],
-      tags: ["Software Development", "Automation", "Data"],
+      tags: ["Power BI", "Generative AI", "Celonis", "Teradata", "S/4HANA"],
+    },
+    {
+      role: "Senior Software Engineer",
+      company: "Infosys Ltd",
+      period: "Oct 2019 — May 2022",
+      location: "Mysuru, India",
+      description:
+        "Led automation and full-stack delivery for financial-services clients, and mentored the wider practice.",
+      highlights: [
+        "Led a team developing AI-enabled automation solutions and bots for financial-services clients, improving production efficiency by 50%+ in the client business environment",
+        "Developed full-stack applications in React.js, Redux and Python; built computer vision and deep learning backends with Python and OpenCV, deploying on Azure App Service",
+        "Built desktop and web automation integrating Google Drive APIs with end-to-end testing, reducing processing time from 60 to 5 minutes; automated Oracle Cloud journal creation and optimised SQL calls for 5x faster execution",
+        "Trained 30+ associates on Power Platform; served as Scrum Master and Business Analyst, driving Canvas and Model-Driven app development",
+      ],
+      tags: ["React.js", "Python", "OpenCV", "Azure", "Power Platform", "RPA"],
     },
   ],
 
-  // TODO — replace with your real degree(s) and dates.
   education: [
     {
       degree: "M.S. Computer Science",
-      school: "Add your university",
-      period: "TODO",
-      note: "Focus: artificial intelligence and machine learning.",
+      school: "University of Texas at Arlington",
+      period: "May 2024",
+      note: "Arlington, TX",
     },
     {
-      degree: "B.Tech / B.E. Computer Science",
-      school: "Add your university",
-      period: "TODO",
-      note: "",
+      degree: "B.Tech Computer Science",
+      school: "APJ Abdul Kalam Technological University",
+      period: "May 2019",
+      note: "India",
     },
   ],
 
-  // Skill groups rendered as a bento grid + progress meters.
   skills: [
     {
-      group: "Machine Learning & AI",
+      group: "Generative AI & LLM",
       items: [
-        "Deep Learning",
-        "Computer Vision",
-        "Generative Models / GANs",
-        "Natural Language Processing",
-        "CNNs",
-        "Search & Planning",
-        "Model Evaluation",
+        "Large Language Models",
+        "Retrieval-Augmented Generation",
+        "Generative AI Agents",
+        "LangChain",
+        "Pydantic AI",
+        "Microsoft Copilot Studio",
+        "Agent Orchestration",
+        "Prompt Engineering",
+        "OpenAI / Azure OpenAI API",
+        "Function Calling / Tool Use",
       ],
     },
     {
-      group: "Frameworks & Libraries",
+      group: "ML & Deep Learning",
       items: [
-        "PyTorch",
         "TensorFlow",
+        "PyTorch",
         "Keras",
-        "scikit-learn",
-        "OpenCV",
-        "NumPy",
+        "Scikit-learn",
         "Pandas",
+        "NumPy",
+        "NLP",
+        "Computer Vision",
+        "CNNs",
+        "Neural Networks",
       ],
     },
     {
       group: "Languages",
-      items: ["Python", "SQL", "JavaScript", "Java", "Bash"],
+      items: [
+        "Python",
+        "C# / .NET",
+        "JavaScript",
+        "TypeScript",
+        "Java",
+        "C / C++",
+        "SQL",
+        "VBA",
+        "HTML/CSS",
+      ],
     },
     {
-      group: "Cloud & Platform",
+      group: "Cloud & DevOps",
       items: [
-        "Google Cloud Platform",
-        "Vertex AI",
+        "Azure (OpenAI, Entra ID, App Service, Fabric)",
+        "AWS (EC2, S3, Textract, Athena)",
+        "Google Cloud (Document AI, Vision API)",
         "Docker",
+        "Kubernetes",
         "CI/CD",
-        "GitHub Actions",
-        "REST APIs",
+        "Git / GitHub",
       ],
     },
     {
-      group: "Data & Automation",
+      group: "APIs & Web",
       items: [
-        "Data Engineering",
-        "ETL Pipelines",
-        "Robotic Process Automation",
-        "Form / Document Processing",
-        "Analytics",
+        "RESTful APIs",
+        "FastAPI",
+        "Flask",
+        "Django",
+        "Node.js",
+        "React",
+        "Angular",
+        "Spring Boot",
+        "MERN",
+      ],
+    },
+    {
+      group: "Data & Big Data",
+      items: [
+        "Data Pipelines / ETL",
+        "Microsoft Fabric",
+        "Power BI",
+        "Apache Spark",
+        "Hadoop",
+        "Kafka",
+        "Scala",
+        "Tableau",
+        "Alteryx",
+      ],
+    },
+    {
+      group: "Databases & Methods",
+      items: [
+        "SQL Server",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Agile",
+        "Scrum",
+        "Kanban (Jira)",
+      ],
+    },
+    {
+      group: "Automation",
+      items: [
+        "Power Apps",
+        "Power Automate",
+        "UiPath",
+        "Robot Framework",
       ],
     },
   ],
 
-  // Proficiency meters — tweak the values to match how you'd rate yourself.
   proficiency: [
-    { label: "Python & ML tooling", value: 92 },
-    { label: "Deep learning (CV / NLP)", value: 88 },
-    { label: "Cloud deployment (GCP)", value: 80 },
-    { label: "Data engineering & SQL", value: 84 },
-    { label: "Automation & scripting", value: 86 },
+    { label: "Python & production services", value: 94 },
+    { label: "LLM apps, RAG & AI agents", value: 90 },
+    { label: "Cloud (Azure / AWS / GCP)", value: 86 },
+    { label: "Data pipelines & SQL", value: 88 },
+    { label: "Deep learning (CV / NLP)", value: 84 },
+    { label: "Automation & RPA", value: 90 },
   ],
 
-  // Headline numbers in the hero.
   stats: [
     { label: "Years of experience", value: 5, suffix: "+" },
-    { label: "Projects shipped", value: 15, suffix: "+" },
-    { label: "AI/ML repositories", value: 8, suffix: "" },
-    { label: "Domains worked in", value: 4, suffix: "" },
+    { label: "Employees served by AI agents", value: 500, suffix: "+" },
+    { label: "Efficiency gain delivered", value: 50, suffix: "%" },
+    { label: "Engineers trained", value: 30, suffix: "+" },
   ],
 
-  // GITHUB — real repositories from github.com/abilvj2.
   projects: [
     {
       title: "Face-to-Sketch CycleGAN",
@@ -167,23 +232,23 @@ export const profile = {
       accent: "from-fuchsia-500/25 to-violet-500/10",
     },
     {
-      title: "GCP Traffic Signal Classifier",
+      title: "GCP Traffic Sign Classifier",
       blurb:
         "A convolutional neural network in Keras/TensorFlow that classifies traffic sign images with high accuracy, deployed on Google Cloud Platform for real-time recognition.",
       tags: ["TensorFlow", "Keras", "CNN", "GCP"],
       href: "https://github.com/abilvj2/GCP-Traffic-Signal-Classifier",
       featured: true,
-      year: "2024",
+      year: "2020",
       accent: "from-sky-500/25 to-cyan-500/10",
     },
     {
-      title: "Face-Enabled Secure Browser",
+      title: "Face Recognition Browser",
       blurb:
-        "A security browser gated by real-time face recognition — continuously verifies the operator and locks the session the moment an unrecognised face appears.",
+        "A privacy-focused browser gated by real-time face recognition — continuously verifies the operator with OpenCV and locks the session the moment an unrecognised face appears.",
       tags: ["OpenCV", "Face Recognition", "Python", "Security"],
       href: "https://github.com/abilvj2/Face-enabled-Browser",
       featured: true,
-      year: "2023",
+      year: "2019",
       accent: "from-emerald-500/25 to-teal-500/10",
     },
     {
@@ -238,48 +303,61 @@ export const profile = {
     },
   ],
 
-  // Logos rendered in the scrolling tech marquee (text-based, no image deps).
-  stack: [
-    "Python",
-    "PyTorch",
-    "TensorFlow",
-    "Keras",
-    "scikit-learn",
-    "OpenCV",
-    "NumPy",
-    "Pandas",
-    "Hugging Face",
-    "LangChain",
-    "SQL",
-    "Docker",
-    "Google Cloud",
-    "Vertex AI",
-    "GitHub Actions",
-    "FastAPI",
-    "Jupyter",
-    "Git",
+  awards: [
+    {
+      title: "Best People's Choice Intern Award",
+      issuer: "HP (Hewlett Packard)",
+      year: "2023",
+      note: "Business impact across global HP interns.",
+    },
+    {
+      title: "Project Excellence Award",
+      issuer: "Infosys — Microsoft Business Application Practice",
+      year: "",
+      note: "Recognised for innovative solutions.",
+    },
   ],
 
-  // What people say — TODO, replace or delete the section in App.tsx.
-  testimonials: [
+  certifications: [
     {
-      quote:
-        "Placeholder testimonial. Replace with a real recommendation from your LinkedIn profile, or remove the Testimonials section from src/App.tsx.",
-      name: "Add a colleague",
-      title: "Their role, Their company",
+      title: "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+      issuer: "Microsoft",
     },
     {
-      quote:
-        "Placeholder testimonial. LinkedIn recommendations translate well here — keep them to two or three sentences.",
-      name: "Add a manager",
-      title: "Their role, Their company",
+      title: "Microsoft Certified: Power Platform Fundamentals (PL-900)",
+      issuer: "Microsoft",
     },
     {
-      quote:
-        "Placeholder testimonial. A short line about how you work is more convincing than a long one about what you know.",
-      name: "Add a client",
-      title: "Their role, Their company",
+      title: "AI with Python",
+      issuer: "Harvard",
     },
+  ],
+
+  stack: [
+    "Python",
+    "Azure OpenAI",
+    "LangChain",
+    "Copilot Studio",
+    "PyTorch",
+    "TensorFlow",
+    "Scikit-learn",
+    "OpenCV",
+    "FastAPI",
+    "C# / .NET",
+    "React",
+    "TypeScript",
+    "Microsoft Fabric",
+    "Power BI",
+    "Docker",
+    "Kubernetes",
+    "SQL Server",
+    "PostgreSQL",
+    "Apache Spark",
+    "Kafka",
+    "AWS",
+    "Google Cloud",
+    "UiPath",
+    "Git",
   ],
 
   links: {
@@ -290,18 +368,10 @@ export const profile = {
      * Google Form used as the contact channel, so the email address is never
      * published on the page for scrapers to harvest.
      *
-     * To set this up:
-     *  1. Create a form at https://forms.new — suggested fields: Name, Email,
-     *     Company (optional), Message.
-     *  2. In the form, open the Responses tab → ⋮ menu → "Get email
-     *     notifications for new responses". That is what makes a submission
-     *     arrive in your inbox.
-     *  3. Click Send → the link icon (🔗) → copy the URL and paste it below.
-     *     A .../viewform URL is what you want; the shortened forms.gle link
-     *     works too but cannot be embedded.
-     *
-     * Until this is filled in, the contact section falls back to LinkedIn, so
-     * the live site is never left with a dead button.
+     * Remember to switch on Responses → ⋮ → "Get email notifications for new
+     * responses" in the form itself — that is what delivers submissions to the
+     * inbox. Short forms.gle links cannot be embedded; use the long
+     * docs.google.com/forms/.../viewform URL.
      */
     contactForm:
       "https://docs.google.com/forms/d/e/1FAIpQLScP-yHy__3dF0or8dHzjW3o5vf984x_JTHXwAWlf4Xmzu0JnQ/viewform",
