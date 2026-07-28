@@ -29,10 +29,9 @@ export const profile = {
     "Software engineer with 7+ years building production Python applications, intelligent automation and AI-powered solutions across healthcare and enterprise environments.",
 
   summary: [
-    "Much of my work is intelligent automation: robotic process automation with UiPath, Robot Framework and the Microsoft Power Platform, taking manual enterprise workflows and turning them into attended and unattended bots that run unsupervised.",
-    "That now runs on top of the full AI development lifecycle — data ingestion through deployment and monitoring — building Large Language Model applications, Retrieval-Augmented Generation systems and generative AI agents on Azure and Microsoft Copilot Studio.",
-    "That sits on a foundation of traditional machine learning with TensorFlow, PyTorch and Scikit-learn, plus the engineering around it: RESTful APIs, containerised deployment with Docker and Kubernetes, and CI/CD.",
-    "Most of my recent work is HIPAA-aligned healthcare data serving 500+ users, where correctness and access control matter as much as model quality.",
+    "I design intelligent, automated and scalable solutions across healthcare, enterprise and consulting domains. Much of that is robotic process automation — Robot Framework, UiPath and the Microsoft Power Platform — turning manual workflows into bots that run without human intervention.",
+    "At Creative Solutions in Healthcare I build data pipelines, optimise SQL systems, and develop apps, business process flows and Azure AI tools that support critical decision-making. Earlier, at Infosys, I led end-to-end development of AI-enabled and cloud-native solutions for global clients, and at HP I built enterprise dashboards and data automation for operational visibility.",
+    "I'm passionate about building smart systems that automate processes, enhance user experiences, and solve real-world problems through data and innovation.",
   ],
 
   experience: [
@@ -40,7 +39,7 @@ export const profile = {
       role: "Software Engineer",
       company: "Creative Solutions in HealthCare",
       period: "Jul 2024 — Present",
-      location: "Texas",
+      location: "Fort Worth, TX",
       description:
         "Building AI agents and data infrastructure over enterprise healthcare data, with HIPAA-aligned handling of PHI throughout.",
       highlights: [
@@ -52,10 +51,24 @@ export const profile = {
       tags: ["Azure OpenAI", "RAG", "Copilot Studio", "Microsoft Fabric", "C#", "Python"],
     },
     {
-      role: "Intelligent Automation & Data Visualization Architect (Intern)",
+      role: "Graduate Research Assistant — Cross-Platform Developer",
+      company: "Computer Science & Engineering, UT Arlington",
+      period: "Oct 2022 — May 2024",
+      location: "Arlington, TX",
+      description:
+        "Research and development on robotic process automation for medical workflows, alongside community-facing web platforms.",
+      highlights: [
+        "Built robotic process automation with Robot Framework that achieved a 70x reduction in human input for medical form processing, integrating Google Cloud Document AI",
+        "Created an interactive web portal in Django as the end-user platform for the automation, contributing to community projects",
+        "Applied advanced image and sensory data interpretation in support of community-benefit research",
+      ],
+      tags: ["Robot Framework", "RPA", "Google Document AI", "Django", "TensorFlow"],
+    },
+    {
+      role: "Automation & Data Visualization Architect (Intern)",
       company: "HP (Hewlett Packard)",
       period: "May 2023 — Aug 2023",
-      location: "United States",
+      location: "Houston, TX",
       description:
         "Enterprise analytics and reporting governance across Finance and IT, alongside an S/4HANA deployment.",
       highlights: [
@@ -68,8 +81,8 @@ export const profile = {
     {
       role: "Senior Software Engineer",
       company: "Infosys Ltd",
-      period: "Oct 2019 — May 2022",
-      location: "Mysuru, India",
+      period: "Oct 2019 — Jun 2022",
+      location: "Mysuru, Karnataka, India",
       description:
         "Led automation and full-stack delivery for financial-services clients, and mentored the wider practice.",
       highlights: [
@@ -79,6 +92,32 @@ export const profile = {
         "Trained 30+ associates on Power Platform; served as Scrum Master and Business Analyst, driving Canvas and Model-Driven app development",
       ],
       tags: ["React.js", "Python", "OpenCV", "Azure", "Power Platform", "RPA"],
+    },
+    {
+      role: "Full Stack Software Development Intern",
+      company: "PixDynamics",
+      period: "Jun 2018 — Aug 2018",
+      location: "Kochi, India",
+      description:
+        "Company projects spanning MVP development, machine learning practice and digital marketing tooling.",
+      highlights: [
+        "Delivered against an MVP model across .NET and ASP.NET MVC projects",
+        "Applied early machine learning practices in a commercial setting",
+      ],
+      tags: ["ASP.NET MVC", ".NET", "Machine Learning"],
+    },
+    {
+      role: "Software Development Intern",
+      company: "VIPoint",
+      period: "Jun 2016 — Jul 2016",
+      location: "Infopark, Kochi, India",
+      description:
+        "Server-side development and Linux fundamentals, covering the basics of web application development.",
+      highlights: [
+        "Server-side coding and Linux administration fundamentals",
+        "Introduction to SQL and full web application development",
+      ],
+      tags: ["SQL", "Linux", "Web Development"],
     },
   ],
 
@@ -91,9 +130,9 @@ export const profile = {
     },
     {
       degree: "B.Tech Computer Science",
-      school: "APJ Abdul Kalam Technological University",
+      school: "Viswajyothi College of Engineering & Technology",
       period: "May 2019",
-      note: "India",
+      note: "APJ Abdul Kalam Technological University · Kerala, India",
     },
   ],
 
@@ -223,12 +262,22 @@ export const profile = {
 
   stats: [
     { label: "Years of experience", value: 7, suffix: "+" },
+    { label: "Less manual input via RPA", value: 70, suffix: "×" },
     { label: "Employees served by AI agents", value: 500, suffix: "+" },
-    { label: "Efficiency gain delivered", value: 50, suffix: "%" },
     { label: "Engineers trained", value: 30, suffix: "+" },
   ],
 
   projects: [
+    {
+      title: "Robot Framework Insurance Automation",
+      blurb:
+        "End-to-end insurance claim processing with no human intervention: the bot extracts insurance information from the web, performs the calculations, then fills clinic software and billing PDFs automatically.",
+      tags: ["Robot Framework", "RPA", "Google Cloud", "Document AI"],
+      href: "https://github.com/abilvj2/RoboCorp",
+      featured: true,
+      year: "2023",
+      accent: "from-teal-500/25 to-emerald-500/10",
+    },
     {
       title: "Face-to-Sketch CycleGAN",
       blurb:
@@ -245,7 +294,7 @@ export const profile = {
         "A convolutional neural network in Keras/TensorFlow that classifies traffic sign images with high accuracy, deployed on Google Cloud Platform for real-time recognition.",
       tags: ["TensorFlow", "Keras", "CNN", "GCP"],
       href: "https://github.com/abilvj2/GCP-Traffic-Signal-Classifier",
-      featured: true,
+      featured: false,
       year: "2020",
       accent: "from-sky-500/25 to-cyan-500/10",
     },
@@ -258,6 +307,16 @@ export const profile = {
       featured: true,
       year: "2019",
       accent: "from-emerald-500/25 to-teal-500/10",
+    },
+    {
+      title: "Emotional Analysis from Text",
+      blurb:
+        "An emotion detection system that processes free text and classifies the sentiment behind it — an early undergraduate dive into NLP.",
+      tags: ["NLP", "Sentiment Analysis", "Python"],
+      href: "https://github.com/abilvj2",
+      featured: false,
+      year: "2018",
+      accent: "from-purple-500/20 to-violet-500/10",
     },
     {
       title: "Question Answering AI",
@@ -329,15 +388,42 @@ export const profile = {
   certifications: [
     {
       title: "Microsoft Certified: Azure AI Fundamentals (AI-900)",
-      issuer: "Microsoft",
+      issuer: "Microsoft · Jun 2022",
     },
     {
       title: "Microsoft Certified: Power Platform Fundamentals (PL-900)",
-      issuer: "Microsoft",
+      issuer: "Microsoft · Dec 2021",
     },
     {
-      title: "AI with Python",
-      issuer: "Harvard",
+      title: "Introduction to Artificial Intelligence with Python",
+      issuer: "HarvardX CS50 · Aug 2020",
+    },
+    {
+      title: "Introduction to TensorFlow for AI, ML and Deep Learning",
+      issuer: "Coursera · May 2020",
+    },
+    {
+      title: "Image Classification with CNNs using Keras",
+      issuer: "Coursera · May 2020",
+    },
+  ],
+
+  /** Talks and community work. */
+  speaking: [
+    {
+      title: "Power Platform and Copilot Agents",
+      event: "Arlington Microsoft Fabric User Group",
+      date: "May 2026",
+      blurb:
+        "Invited speaker for a hands-on session on building Power Automate flows, and how the broader Power Platform serves as the action engine for custom Copilot Agents — plus an introduction to AI agents.",
+    },
+  ],
+
+  volunteering: [
+    {
+      role: "Volunteer",
+      org: "FIFA World Cup 2026",
+      note: "Part of the volunteer team for the tournament.",
     },
   ],
 
