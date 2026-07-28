@@ -17,7 +17,7 @@ import { Meteors } from "@/components/ui/meteors";
 import { profile } from "@/data/profile";
 import { cn } from "@/lib/utils";
 
-const ICONS = [Sparkles, Brain, Code2, Cloud, Network, Database, Server, Bot];
+const ICONS = [Sparkles, Brain, Bot, Cloud, Network, Database, Server, Code2];
 
 // Bento layout: alternating wide and narrow tiles so the grid reads as a
 // composition rather than a plain 3-column list. Spans total 12 across 8
@@ -25,11 +25,11 @@ const ICONS = [Sparkles, Brain, Code2, Cloud, Network, Database, Server, Bot];
 const SPANS = [
   "md:col-span-2",
   "md:col-span-1",
+  "md:col-span-2", // Intelligent Automation & RPA — widest group, needs the room
   "md:col-span-1",
-  "md:col-span-2",
+  "md:col-span-2", // APIs & Web
+  "md:col-span-2", // Data & Big Data
   "md:col-span-1",
-  "md:col-span-2",
-  "md:col-span-2",
   "md:col-span-1",
 ];
 
