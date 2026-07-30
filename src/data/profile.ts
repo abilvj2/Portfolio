@@ -316,6 +316,16 @@ export const profile = {
       accent: "from-emerald-500/25 to-teal-500/10",
     },
     {
+      title: "Insurance Deduction Calculator",
+      blurb:
+        "An attended Robocorp assistant that reads insurance treatment-plan documents with Google Document AI, extracts the tables, calculates patient deductions and exports the results to CSV.",
+      tags: ["Robocorp", "Robot Framework", "Document AI", "Python"],
+      href: "https://github.com/abilvj2/Insurance_Deduction_Calculator",
+      featured: false,
+      year: "2023",
+      accent: "from-lime-500/20 to-emerald-500/10",
+    },
+    {
       title: "Question Answering AI",
       blurb:
         "An information-retrieval question answering system that ranks documents by tf-idf and extracts the best-matching sentence for a natural language query.",
@@ -405,7 +415,14 @@ export const profile = {
     },
   ],
 
-  /** Talks and community work. */
+  /**
+   * Talks and community work.
+   *
+   * `image` is an optional filename inside /public — drop the speaker card or
+   * event photo there and set it here (e.g. "speaking-fabric-2026.jpg"). When
+   * it is empty the card renders a designed placeholder instead, so the layout
+   * never breaks on a missing file.
+   */
   speaking: [
     {
       title: "Power Platform and Copilot Agents",
@@ -413,6 +430,7 @@ export const profile = {
       date: "May 2026",
       blurb:
         "Invited speaker for a hands-on session on building Power Automate flows, and how the broader Power Platform serves as the action engine for custom Copilot Agents — plus an introduction to AI agents.",
+      image: "",
     },
   ],
 
@@ -421,6 +439,7 @@ export const profile = {
       role: "Volunteer",
       org: "FIFA World Cup 2026",
       note: "Part of the volunteer team for the tournament.",
+      image: "",
     },
   ],
 
@@ -460,19 +479,22 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/abilvjose/",
 
     /**
-     * Google Form used as the contact channel, so the email address is never
-     * published on the page for scrapers to harvest.
+     * Web3Forms access key. The contact form posts to Web3Forms, which
+     * forwards each submission to the inbox registered against this key —
+     * so the email address never appears in the page source.
      *
-     * Remember to switch on Responses → ⋮ → "Get email notifications for new
-     * responses" in the form itself — that is what delivers submissions to the
-     * inbox. Short forms.gle links cannot be embedded; use the long
-     * docs.google.com/forms/.../viewform URL.
+     * To get one (free, no account, takes about a minute):
+     *  1. Go to https://web3forms.com
+     *  2. Enter the address you want submissions delivered to.
+     *  3. The access key arrives by email — paste it here.
+     *
+     * The key is a public token by design: it only identifies the
+     * destination inbox and cannot be used to read anything. Safe to commit.
+     *
+     * While this is empty the section falls back to a LinkedIn link, so the
+     * live site never shows a form that silently fails.
      */
-    contactForm:
-      "https://docs.google.com/forms/d/e/1FAIpQLScP-yHy__3dF0or8dHzjW3o5vf984x_JTHXwAWlf4Xmzu0JnQ/viewform",
-
-    /** Set false to show a button instead of embedding the form inline. */
-    contactFormEmbed: true,
+    contactAccessKey: "",
 
     /**
      * Path inside /public. Resolved against the site's base path at render

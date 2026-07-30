@@ -1,4 +1,5 @@
-import { Award, BadgeCheck, HeartHandshake, Mic } from "lucide-react";
+import { Award, BadgeCheck, HeartHandshake, Mic, Trophy } from "lucide-react";
+import { MediaFrame } from "@/components/ui/media-frame";
 import { SectionHeading } from "./SectionHeading";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
@@ -32,15 +33,41 @@ export function Credentials() {
                   </span>
                 </div>
 
-                <h3 className="mt-4 text-2xl font-semibold text-white">
-                  {talk.title}
-                </h3>
-                <p className="mt-1 text-sm font-medium text-accent-soft">
-                  {talk.event}
-                </p>
-                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-400">
-                  {talk.blurb}
-                </p>
+                <div className="mt-4 grid gap-6 md:grid-cols-[1.4fr_1fr] md:items-center">
+                  <div>
+                    <h3 className="text-2xl font-semibold text-white">
+                      {talk.title}
+                    </h3>
+                    <p className="mt-1 text-sm font-medium text-accent-soft">
+                      {talk.event}
+                    </p>
+                    <p className="mt-4 text-sm leading-relaxed text-slate-400">
+                      {talk.blurb}
+                    </p>
+                  </div>
+
+                  <MediaFrame
+                    src={talk.image}
+                    alt={`${talk.title} — ${talk.event}`}
+                    ratio="aspect-square"
+                    placeholder={
+                      <div className="space-y-2">
+                        <Mic className="mx-auto h-8 w-8 text-accent/70" />
+                        <p className="text-sm font-semibold text-slate-200">
+                          {talk.event}
+                        </p>
+                        <p className="font-mono text-xs text-slate-500">
+                          {talk.date} · Online
+                        </p>
+                        <p className="pt-2 text-[11px] leading-relaxed text-slate-600">
+                          Add the speaker card to <code>public/</code> and set
+                          <br />
+                          <code>speaking[0].image</code>
+                        </p>
+                      </div>
+                    }
+                  />
+                </div>
 
                 <BorderBeam size={320} duration={14} />
               </div>
@@ -91,11 +118,25 @@ export function Credentials() {
                     </h4>
                   </div>
                   {profile.volunteering.map((v) => (
-                    <div key={v.org} className="mt-3">
-                      <p className="text-sm font-medium text-slate-200">
-                        {v.role} · {v.org}
-                      </p>
-                      <p className="mt-0.5 text-sm text-slate-400">{v.note}</p>
+                    <div
+                      key={v.org}
+                      className="mt-3 grid gap-4 sm:grid-cols-[1fr_auto] sm:items-center"
+                    >
+                      <div>
+                        <p className="text-sm font-medium text-slate-200">
+                          {v.role} · {v.org}
+                        </p>
+                        <p className="mt-0.5 text-sm text-slate-400">{v.note}</p>
+                      </div>
+                      <MediaFrame
+                        src={v.image}
+                        alt={`${v.role} at ${v.org}`}
+                        ratio="aspect-square"
+                        className="w-full sm:w-28"
+                        placeholder={
+                          <Trophy className="h-7 w-7 text-violetish/70" />
+                        }
+                      />
                     </div>
                   ))}
                 </div>

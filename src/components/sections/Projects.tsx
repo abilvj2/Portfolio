@@ -110,7 +110,7 @@ export function Projects() {
             More on GitHub
           </h3>
           <HoverEffect
-            className="mt-4 lg:grid-cols-3"
+            className="mt-4"
             items={rest.map((p) => ({
               title: p.title,
               description: p.blurb,

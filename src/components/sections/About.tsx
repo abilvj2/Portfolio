@@ -5,7 +5,16 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { GridPattern } from "@/components/ui/dot-pattern";
+import { OrbitingCircles } from "@/components/ui/orbiting-circles";
 import { profile } from "@/data/profile";
+
+function OrbitPill({ label }: { label: string }) {
+  return (
+    <span className="whitespace-nowrap rounded-full border border-white/15 bg-ink-950/90 px-2.5 py-1 text-[10px] font-medium text-slate-300 shadow-lg backdrop-blur-sm">
+      {label}
+    </span>
+  );
+}
 
 export function About() {
   return (
@@ -75,6 +84,37 @@ export function About() {
                     </li>
                   ))}
                 </ul>
+              </CardSpotlight>
+            </BlurFade>
+
+            {/* A moving element between the text blocks — the orbit reads as
+                "these tools revolve around the work" without being a gimmick. */}
+            <BlurFade delay={0.22}>
+              <CardSpotlight className="relative h-[240px] overflow-hidden p-0">
+                <div className="relative flex h-full w-full items-center justify-center">
+                  <div className="z-10 flex flex-col items-center">
+                    <span className="bg-gradient-to-b from-white to-slate-500 bg-clip-text text-2xl font-bold text-transparent">
+                      Automate
+                    </span>
+                    <span className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
+                      then intelligence
+                    </span>
+                  </div>
+
+                  <OrbitingCircles radius={62} duration={22}>
+                    <OrbitPill label="UiPath" />
+                    <OrbitPill label="Robot FW" />
+                  </OrbitingCircles>
+                  <OrbitingCircles radius={62} duration={22} delay={11}>
+                    <OrbitPill label="Power Automate" />
+                  </OrbitingCircles>
+                  <OrbitingCircles radius={105} duration={32} reverse>
+                    <OrbitPill label="Azure OpenAI" />
+                  </OrbitingCircles>
+                  <OrbitingCircles radius={105} duration={32} delay={16} reverse>
+                    <OrbitPill label="Copilot Studio" />
+                  </OrbitingCircles>
+                </div>
               </CardSpotlight>
             </BlurFade>
 

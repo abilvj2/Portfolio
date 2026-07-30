@@ -93,6 +93,17 @@ export default {
           "0%, 70%, 100%": { opacity: "1" },
           "20%, 50%": { opacity: "0" },
         },
+        // Magic UI — Orbiting Circles
+        orbit: {
+          "0%": {
+            transform:
+              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform:
+              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
       },
       animation: {
         aurora: "aurora 60s linear infinite",
@@ -111,6 +122,7 @@ export default {
         shine: "shine var(--shine-duration, 14s) ease-in-out infinite",
         float: "float 12s ease-in-out infinite",
         "caret-blink": "caret-blink 1.2s ease-out infinite",
+        orbit: "orbit calc(var(--duration) * 1s) linear infinite",
       },
     },
   },

@@ -4,7 +4,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { GradientText } from "@/components/ui/animated-gradient-text";
-import { BorderBeam } from "@/components/ui/border-beam";
+import { ContactForm } from "./ContactForm";
 import { profile } from "@/data/profile";
 
 const CHANNELS = [
@@ -22,20 +22,8 @@ const CHANNELS = [
   },
 ];
 
-/**
- * Turns a Google Form share URL into its embeddable form. Short forms.gle
- * links cannot be embedded, so those fall back to a plain button.
- */
-function toEmbedUrl(url: string): string | null {
-  if (!url.includes("docs.google.com/forms")) return null;
-  const base = url.split("?")[0].replace(/\/(edit|viewform)?$/, "");
-  return `${base}/viewform?embedded=true`;
-}
-
 export function Contact() {
-  const formUrl = profile.links.contactForm;
-  const embedUrl =
-    formUrl && profile.links.contactFormEmbed ? toEmbedUrl(formUrl) : null;
+  const hasForm = Boolean(profile.links.contactAccessKey);
 
   return (
     <section id="contact" className="relative isolate overflow-hidden py-32">
@@ -63,41 +51,22 @@ export function Contact() {
           </p>
         </BlurFade>
 
-        {embedUrl ? (
+        {hasForm ? (
           <BlurFade delay={0.24}>
-            <div className="relative mx-auto mt-12 max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-ink-900/70 p-2 backdrop-blur-sm">
-              <iframe
-                src={embedUrl}
-                title="Contact form"
-                className="h-[620px] w-full rounded-2xl bg-white"
-                loading="lazy"
-              >
-                Loading…
-              </iframe>
-              <BorderBeam size={300} duration={16} />
-            </div>
-            <a
-              href={formUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="mt-5 inline-flex items-center gap-1.5 text-sm text-slate-500 transition-colors hover:text-accent"
-            >
-              Trouble with the form? Open it in a new tab
-              <ArrowUpRight className="h-3.5 w-3.5" />
-            </a>
+            <ContactForm />
           </BlurFade>
         ) : (
           <BlurFade delay={0.24}>
             <div className="mt-10 flex justify-center">
               <ShimmerButton
-                href={formUrl || profile.links.linkedin}
+                href={profile.links.linkedin}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="px-8 py-4"
               >
                 <span className="z-10 flex items-center gap-2 font-semibold text-white">
                   <MessageSquare className="h-4 w-4" />
-                  {formUrl ? "Open the contact form" : "Message me on LinkedIn"}
+                  Message me on LinkedIn
                 </span>
               </ShimmerButton>
             </div>

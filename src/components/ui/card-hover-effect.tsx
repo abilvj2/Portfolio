@@ -16,8 +16,14 @@ export function HoverEffect({
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
+    // Flex-wrap rather than a fixed grid: a trailing partial row centres
+    // itself instead of leaving a hole on one side, so the layout stays
+    // balanced whatever number of projects it is given.
     <div
-      className={cn("grid grid-cols-1 gap-2 py-6 md:grid-cols-2 lg:grid-cols-3", className)}
+      className={cn(
+        "flex flex-wrap justify-center gap-2 py-6 [--card:100%] sm:[--card:calc(50%-0.5rem)] lg:[--card:calc(33.333%-0.667rem)] xl:[--card:calc(25%-0.75rem)]",
+        className,
+      )}
     >
       {items.map((item, idx) => {
         const Wrapper = item.link ? "a" : "div";
@@ -27,7 +33,7 @@ export function HoverEffect({
             {...(item.link
               ? { href: item.link, target: "_blank", rel: "noreferrer noopener" }
               : {})}
-            className="group relative block h-full w-full p-2"
+            className="group relative block w-[var(--card)] p-2"
             onMouseEnter={() => setHovered(idx)}
             onMouseLeave={() => setHovered(null)}
           >
