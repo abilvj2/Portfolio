@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, FileText, Github, Linkedin, MapPin, Sparkle } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, MapPin, Sparkle } from "lucide-react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Spotlight } from "@/components/ui/spotlight";
 import { SparklesCore } from "@/components/ui/sparkles";
@@ -132,12 +132,12 @@ export function Hero() {
             </a>
             {profile.links.resume && (
               <a
-                href={profile.links.resume}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="glass inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-medium text-slate-200 transition-colors hover:border-white/25 hover:text-white"
+                // BASE_URL keeps this correct under the /Portfolio/ sub-path.
+                href={`${import.meta.env.BASE_URL}${profile.links.resume}`}
+                download
+                className="glass inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-medium text-slate-200 transition-colors hover:border-accent/50 hover:text-white"
               >
-                <FileText className="h-4 w-4" /> Résumé
+                <Download className="h-4 w-4" /> Download résumé
               </a>
             )}
           </motion.div>

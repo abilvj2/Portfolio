@@ -14,14 +14,8 @@
 export const profile = {
   name: "Abil Varkichan Jose",
   shortName: "Abil",
-  role: "AI Engineer",
-  roles: [
-    "AI Engineer",
-    "Intelligent Automation Engineer",
-    "RPA Developer",
-    "LLM & RAG Developer",
-    "Software Engineer",
-  ],
+  role: "Intelligent Automation / AI Engineer",
+  roles: ["Intelligent Automation Engineer", "AI Engineer"],
   location: "Dallas, TX",
   avatar: "https://avatars.githubusercontent.com/u/37629877?v=4",
 
@@ -271,6 +265,17 @@ export const profile = {
 
   projects: [
     {
+      title: "Prior-Authorization Copilot",
+      blurb:
+        "Agentic RAG decision support for prior-authorization review — typed, cited and abstention-first. It never issues an approval: there is no APPROVED value in the output enum, so the system cannot emit one. Every claim traces to a quoted policy section.",
+      tags: ["Pydantic AI", "Agentic RAG", "pgvector", "FastAPI", "XGBoost"],
+      href:
+        "https://github.com/abilvj2/Authorization-Copilot-Agentic-RAG-for-Eligibility-Claims",
+      featured: true,
+      year: "2026",
+      accent: "from-sky-500/25 to-indigo-500/10",
+    },
+    {
       title: "Robot Framework Insurance Automation",
       blurb:
         "End-to-end insurance claim processing with no human intervention: the bot extracts insurance information from the web, performs the calculations, then fills clinic software and billing PDFs automatically.",
@@ -309,16 +314,6 @@ export const profile = {
       featured: true,
       year: "2019",
       accent: "from-emerald-500/25 to-teal-500/10",
-    },
-    {
-      title: "Emotional Analysis from Text",
-      blurb:
-        "An emotion detection system that processes free text and classifies the sentiment behind it — an early undergraduate dive into NLP.",
-      tags: ["NLP", "Sentiment Analysis", "Python"],
-      href: "https://github.com/abilvj2",
-      featured: false,
-      year: "2018",
-      accent: "from-purple-500/20 to-violet-500/10",
     },
     {
       title: "Question Answering AI",
@@ -479,7 +474,11 @@ export const profile = {
     /** Set false to show a button instead of embedding the form inline. */
     contactFormEmbed: true,
 
-    resume: "", // Drop a PDF in /public and set e.g. "resume.pdf"
+    /**
+     * Path inside /public. Resolved against the site's base path at render
+     * time, so it keeps working from any URL and on a custom domain.
+     */
+    resume: "resume.pdf",
   },
 } as const;
 

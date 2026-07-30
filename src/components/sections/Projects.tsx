@@ -8,9 +8,14 @@ import { Meteors } from "@/components/ui/meteors";
 import { profile } from "@/data/profile";
 import { cn } from "@/lib/utils";
 
+const byYearDesc = <T extends { year: string }>(a: T, b: T) =>
+  Number(b.year) - Number(a.year);
+
 export function Projects() {
-  const featured = profile.projects.filter((p) => p.featured);
-  const rest = profile.projects.filter((p) => !p.featured);
+  // Both grids run newest first, so recent work leads regardless of the order
+  // entries happen to sit in profile.ts.
+  const featured = [...profile.projects].filter((p) => p.featured).sort(byYearDesc);
+  const rest = [...profile.projects].filter((p) => !p.featured).sort(byYearDesc);
 
   return (
     <section id="projects" className="relative overflow-hidden py-28">
@@ -23,7 +28,7 @@ export function Projects() {
         />
 
         {/* featured — Aceternity 3D cards */}
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {featured.map((project, i) => (
             <BlurFade key={project.title} delay={i * 0.1}>
               <CardContainer containerClassName="py-0 h-full" className="h-full w-full">
@@ -105,7 +110,7 @@ export function Projects() {
             More on GitHub
           </h3>
           <HoverEffect
-            className="mt-4 lg:grid-cols-4"
+            className="mt-4 lg:grid-cols-3"
             items={rest.map((p) => ({
               title: p.title,
               description: p.blurb,
