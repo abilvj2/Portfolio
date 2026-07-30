@@ -17,29 +17,30 @@ import { Meteors } from "@/components/ui/meteors";
 import { profile } from "@/data/profile";
 import { cn } from "@/lib/utils";
 
-const ICONS = [Sparkles, Brain, Bot, Cloud, Network, Database, Server, Code2];
+const ICONS = [Bot, Brain, Sparkles, Cloud, Network, Server, Database, Code2];
 
-// Bento layout: alternating wide and narrow tiles so the grid reads as a
-// composition rather than a plain 3-column list. Spans total 12 across 8
-// tiles, filling four clean rows.
+// Bento layout: strict wide/narrow alternation. Two consecutive wide tiles
+// cannot share a 3-column row, so the second wraps and strands an empty cell —
+// alternating 2+1 packs all eight tiles into four complete rows with no gaps.
+// The wide slots go to the groups with the longest labels.
 const SPANS = [
-  "md:col-span-2",
-  "md:col-span-1",
-  "md:col-span-2", // Intelligent Automation & RPA — widest group, needs the room
-  "md:col-span-1",
+  "md:col-span-2", // Intelligent Automation & RPA
+  "md:col-span-1", // ML & Deep Learning
+  "md:col-span-2", // Generative AI & LLM
+  "md:col-span-1", // Cloud & DevOps
   "md:col-span-2", // APIs & Web
+  "md:col-span-1", // Databases & Methods
   "md:col-span-2", // Data & Big Data
-  "md:col-span-1",
-  "md:col-span-1",
+  "md:col-span-1", // Languages
 ];
 
 const ACCENTS = [
-  "from-violet-500/20 via-fuchsia-500/10",
-  "from-sky-500/20 via-cyan-500/10",
   "from-emerald-500/20 via-teal-500/10",
+  "from-sky-500/20 via-cyan-500/10",
+  "from-violet-500/20 via-fuchsia-500/10",
   "from-amber-500/20 via-orange-500/10",
-  "from-rose-500/20 via-pink-500/10",
   "from-indigo-500/20 via-blue-500/10",
+  "from-rose-500/20 via-pink-500/10",
   "from-teal-500/20 via-emerald-500/10",
   "from-orange-500/20 via-red-500/10",
 ];
@@ -67,7 +68,10 @@ export function Skills() {
                 header={
                   <div
                     className={cn(
-                      "relative flex w-full flex-1 items-end overflow-hidden rounded-xl bg-gradient-to-br to-transparent p-4",
+                      // items-center rather than items-end: bottom-aligning the
+                      // pills left a band of empty gradient above them in every
+                      // tile. Centring fills the tile instead.
+                      "relative flex w-full flex-1 items-center overflow-hidden rounded-xl bg-gradient-to-br to-transparent p-4",
                       ACCENTS[i % ACCENTS.length],
                     )}
                   >

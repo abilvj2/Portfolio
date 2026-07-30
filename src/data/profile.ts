@@ -136,20 +136,23 @@ export const profile = {
     },
   ],
 
+  // Order matters: the bento grid alternates wide/narrow tiles in this exact
+  // sequence, so every row packs to a full three columns with no empty cells.
   skills: [
     {
-      group: "Generative AI & LLM",
+      group: "Intelligent Automation & RPA",
       items: [
-        "Large Language Models",
-        "Retrieval-Augmented Generation",
-        "Generative AI Agents",
-        "LangChain",
-        "Pydantic AI",
-        "Microsoft Copilot Studio",
-        "Agent Orchestration",
-        "Prompt Engineering",
-        "OpenAI / Azure OpenAI API",
-        "Function Calling / Tool Use",
+        "UiPath",
+        "Robot Framework",
+        "Power Automate",
+        "Power Apps (Canvas & Model-Driven)",
+        "Power Virtual Agents",
+        "Attended & Unattended Bots",
+        "Desktop & Web Automation",
+        "API-Driven Automation",
+        "Document Processing (Textract, Document AI)",
+        "Process Mining (Celonis)",
+        "End-to-End Test Automation",
       ],
     },
     {
@@ -168,19 +171,18 @@ export const profile = {
       ],
     },
     {
-      group: "Intelligent Automation & RPA",
+      group: "Generative AI & LLM",
       items: [
-        "UiPath",
-        "Robot Framework",
-        "Power Automate",
-        "Power Apps (Canvas & Model-Driven)",
-        "Power Virtual Agents",
-        "Attended & Unattended Bots",
-        "Desktop & Web Automation",
-        "API-Driven Automation",
-        "Document Processing (Textract, Document AI)",
-        "Process Mining (Celonis)",
-        "End-to-End Test Automation",
+        "Large Language Models",
+        "Retrieval-Augmented Generation",
+        "Generative AI Agents",
+        "LangChain",
+        "Pydantic AI",
+        "Microsoft Copilot Studio",
+        "Agent Orchestration",
+        "Prompt Engineering",
+        "OpenAI / Azure OpenAI API",
+        "Function Calling / Tool Use",
       ],
     },
     {
@@ -210,6 +212,18 @@ export const profile = {
       ],
     },
     {
+      group: "Databases & Methods",
+      items: [
+        "SQL Server",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Agile",
+        "Scrum",
+        "Kanban (Jira)",
+      ],
+    },
+    {
       group: "Data & Big Data",
       items: [
         "Data Pipelines / ETL",
@@ -221,18 +235,6 @@ export const profile = {
         "Scala",
         "Tableau",
         "Alteryx",
-      ],
-    },
-    {
-      group: "Databases & Methods",
-      items: [
-        "SQL Server",
-        "MySQL",
-        "PostgreSQL",
-        "MongoDB",
-        "Agile",
-        "Scrum",
-        "Kanban (Jira)",
       ],
     },
     {
