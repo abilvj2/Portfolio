@@ -281,6 +281,9 @@ export const profile = {
         "End-to-end insurance claim processing with no human intervention: the bot extracts insurance information from the web, performs the calculations, then fills clinic software and billing PDFs automatically.",
       tags: ["Robot Framework", "RPA", "Google Cloud", "Document AI"],
       href: "https://github.com/abilvj2/RoboCorp",
+      // Repository is private, so the source link would 404 for visitors.
+      // Flip to false once the repo is public and the link returns.
+      isPrivate: true,
       featured: true,
       year: "2023",
       accent: "from-teal-500/25 to-emerald-500/10",
@@ -321,6 +324,7 @@ export const profile = {
         "An attended Robocorp assistant that reads insurance treatment-plan documents with Google Document AI, extracts the tables, calculates patient deductions and exports the results to CSV.",
       tags: ["Robocorp", "Robot Framework", "Document AI", "Python"],
       href: "https://github.com/abilvj2/Insurance_Deduction_Calculator",
+      isPrivate: true,
       featured: false,
       year: "2023",
       accent: "from-lime-500/20 to-emerald-500/10",

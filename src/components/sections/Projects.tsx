@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, Star } from "lucide-react";
+import { ArrowUpRight, Github, Lock, Star } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
@@ -24,7 +24,7 @@ export function Projects() {
           eyebrow="Selected work"
           title="Models, pipelines and"
           highlight="things that ship"
-          description="A sample of what I've built — every card links to the source on GitHub."
+          description="A sample of what I've built — most cards link straight to the source on GitHub."
         />
 
         {/* featured — Aceternity 3D cards */}
@@ -78,18 +78,28 @@ export function Projects() {
                       ))}
                     </CardItem>
 
-                    <CardItem
-                      as="a"
-                      href={project.href}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      translateZ={60}
-                      className="mt-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-medium text-slate-200 transition-colors hover:border-accent/50 hover:text-white"
-                    >
-                      <Github className="h-3.5 w-3.5" />
-                      View source
-                      <ArrowUpRight className="h-3.5 w-3.5" />
-                    </CardItem>
+                    {"isPrivate" in project && project.isPrivate ? (
+                      <CardItem
+                        translateZ={60}
+                        className="mt-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-medium text-slate-500"
+                      >
+                        <Lock className="h-3.5 w-3.5" />
+                        Private repository
+                      </CardItem>
+                    ) : (
+                      <CardItem
+                        as="a"
+                        href={project.href}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        translateZ={60}
+                        className="mt-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-medium text-slate-200 transition-colors hover:border-accent/50 hover:text-white"
+                      >
+                        <Github className="h-3.5 w-3.5" />
+                        View source
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                      </CardItem>
+                    )}
                   </div>
 
                   <BorderBeam
@@ -111,23 +121,33 @@ export function Projects() {
           </h3>
           <HoverEffect
             className="mt-4"
-            items={rest.map((p) => ({
-              title: p.title,
-              description: p.blurb,
-              link: p.href,
-              footer: (
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {p.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded border border-white/10 px-1.5 py-0.5 font-mono text-[10px] text-slate-500"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              ),
-            }))}
+            items={rest.map((p) => {
+              const locked = "isPrivate" in p && p.isPrivate;
+              return {
+                title: p.title,
+                description: p.blurb,
+                // Omitting the link renders a plain card rather than an
+                // anchor, so a private repo never produces a dead button.
+                link: locked ? undefined : p.href,
+                footer: (
+                  <div className="mt-4 flex flex-wrap items-center gap-1.5">
+                    {p.tags.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded border border-white/10 px-1.5 py-0.5 font-mono text-[10px] text-slate-500"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                    {locked && (
+                      <span className="ml-auto inline-flex items-center gap-1 text-[10px] text-slate-600">
+                        <Lock className="h-3 w-3" /> Private
+                      </span>
+                    )}
+                  </div>
+                ),
+              };
+            })}
           />
         </BlurFade>
 
