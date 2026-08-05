@@ -265,6 +265,16 @@ export const profile = {
 
   projects: [
     {
+      title: "TraceLens — LLM Regression Eval",
+      blurb:
+        "A self-hosted observability and regression-evaluation platform for LLM agents. It separates real regressions from noise by putting a bootstrap 95% confidence interval on the paired per-item delta rather than comparing means, and seven of its eight graders are deterministic — so most evaluation runs with no model API key at all.",
+      tags: ["TypeScript", "Next.js", "Fastify", "Python", "Postgres"],
+      href: "https://github.com/abilvj2/Regression-Eval-for-LLMS",
+      featured: true,
+      year: "2026",
+      accent: "from-violet-500/25 to-purple-500/10",
+    },
+    {
       title: "Prior-Authorization Copilot",
       blurb:
         "Agentic RAG decision support for prior-authorization review — typed, cited and abstention-first. It never issues an approval: there is no APPROVED value in the output enum, so the system cannot emit one. Every claim traces to a quoted policy section.",

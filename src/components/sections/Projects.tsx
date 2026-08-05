@@ -28,9 +28,15 @@ export function Projects() {
         />
 
         {/* featured — Aceternity 3D cards */}
-        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {/* Flex-wrap rather than a fixed grid so a trailing partial row
+            centres itself — the featured count changes as work is added. */}
+        <div className="mt-16 flex flex-wrap justify-center gap-6 [--card:100%] sm:[--card:calc(50%-0.75rem)] lg:[--card:calc(33.333%-1rem)]">
           {featured.map((project, i) => (
-            <BlurFade key={project.title} delay={i * 0.1}>
+            <BlurFade
+              key={project.title}
+              delay={i * 0.1}
+              className="w-[var(--card)]"
+            >
               <CardContainer containerClassName="py-0 h-full" className="h-full w-full">
                 <CardBody className="group/card relative h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-ink-900/70 p-6">
                   <div
